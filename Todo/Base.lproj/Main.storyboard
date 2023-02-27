@@ -34,11 +34,60 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="uYg-I0-fhu" id="9oU-KE-Vzc"/>
+                        <segue destination="Oc5-6c-gCc" kind="show" identifier="toEdit" id="fK7-vo-vQl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1043.5114503816794" y="3.5211267605633805"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="Sue-Hd-zY0">
+            <objects>
+                <viewController id="Oc5-6c-gCc" customClass="editViewController" customModule="Todo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1kk-tb-hJF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sM1-xf-8X8">
+                                <rect key="frame" x="37" y="155" width="319" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Flf-rm-Ke0">
+                                <rect key="frame" x="37" y="236" width="319" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="OQo-Re-DFO">
+                                <rect key="frame" x="37" y="461" width="393" height="93"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <locale key="locale" localeIdentifier="ja_JP"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oOn-84-1u0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="7uC-Bq-zNw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="JSC-vM-oKl">
+                            <connections>
+                                <action selector="save" destination="Oc5-6c-gCc" id="nx7-GF-Y78"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="contentTextField" destination="Flf-rm-Ke0" id="ngE-Pg-lcP"/>
+                        <outlet property="deadlineDatePicker" destination="OQo-Re-DFO" id="WSG-ie-fE0"/>
+                        <outlet property="titleTextField" destination="sM1-xf-8X8" id="xs1-bJ-1iT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGc-qz-uVq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="746"/>
         </scene>
         <!--New Todo View Controller-->
         <scene sceneID="UjB-jy-LXd">

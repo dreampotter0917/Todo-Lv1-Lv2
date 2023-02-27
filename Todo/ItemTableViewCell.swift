@@ -23,10 +23,21 @@ class ItemTableViewCell: UITableViewCell {
 
     }
     
-    func setCell(title: String, content: String, deadline: String){
+    func setCell(title: String, content: String, deadline: Date){
         titleLabel.text = title
         contentLabel.text = content
+        
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy'年'M'月'd'日('EEEEE') '"
+        dateFormatter.locale = Locale(identifier: "ja_JP")
+        dateFormatter.timeZone = TimeZone(identifier: "Asia/Tokyo")
+        let deadline = dateFormatter.string(from: deadline)
+
+        
         deadlineLabel.text = deadline
+        
+        
         
     }
     

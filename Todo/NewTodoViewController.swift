@@ -25,14 +25,7 @@ class NewTodoViewController: UIViewController {
         let item = TodoItem()
         item.title = titleTextField.text ?? ""
         item.content = contentTextField.text ?? ""
-
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy'年'M'月'd'日('EEEEE') '"
-        dateFormatter.locale = Locale(identifier: "ja_JP")
-        dateFormatter.timeZone = TimeZone(identifier: "Asia/Tokyo")
-        let deadline = dateFormatter.string(from: deadlineDatePicker.date)
-
-        item.deadline = deadline
+        item.deadline = deadlineDatePicker.date
         
         createItem(item: item)
         

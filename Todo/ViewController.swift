@@ -14,12 +14,14 @@ class ViewController: UIViewController , UITableViewDataSource {
     
     let realm = try! Realm()
     var items:[TodoItem] = []
-
+    
+    var editCategory: TodoItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-    
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "ItemCell")
@@ -43,9 +45,17 @@ class ViewController: UIViewController , UITableViewDataSource {
         
         return cell
     }
-
+    
     func readItems() -> [TodoItem]{
         return Array(realm.objects(TodoItem.self))
+    }
+    // コードをわたした上げるコード
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toEdit" {
+            let nextVC = segue.destination as! editViewController
+            nextVC.editCategory = self.editCategory!
+        }
     }
 
 }
@@ -58,6 +68,18 @@ extension ViewController: UITableViewDelegate {
     // 編集処理
     let editAction = UIContextualAction(style: .normal, title: "Edit") { (action, view, completionHandler) in
       // 編集処理を記述
+        
+        //渡す側
+        self.editCategory = self.items[indexPath.row]
+        self.performSegue(withIdentifier: "toEdit", sender: nil)
+       
+       
+        
+        
+        
+
+        
+        
       print("Editがタップされた")
 
     // 実行結果に関わらず記述

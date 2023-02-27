@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC07C10029AA446F00B42A3D /* editViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC07C0FF29AA446F00B42A3D /* editViewController.swift */; };
 		AC20C76529A6582E00120F0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20C76429A6582E00120F0F /* AppDelegate.swift */; };
 		AC20C76729A6582E00120F0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20C76629A6582E00120F0F /* SceneDelegate.swift */; };
 		AC20C76929A6582E00120F0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20C76829A6582E00120F0F /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC07C0FF29AA446F00B42A3D /* editViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editViewController.swift; sourceTree = "<group>"; };
 		AC20C76129A6582E00120F0F /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC20C76429A6582E00120F0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC20C76629A6582E00120F0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				AC20C77F29A66D7C00120F0F /* ItemTableViewCell.swift */,
 				AC20C78029A66D7C00120F0F /* ItemTableViewCell.xib */,
 				AC20C78329A679B500120F0F /* NewTodoViewController.swift */,
+				AC07C0FF29AA446F00B42A3D /* editViewController.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC20C76929A6582E00120F0F /* ViewController.swift in Sources */,
+				AC07C10029AA446F00B42A3D /* editViewController.swift in Sources */,
 				AC20C78429A679B500120F0F /* NewTodoViewController.swift in Sources */,
 				AC20C76529A6582E00120F0F /* AppDelegate.swift in Sources */,
 				AC20C78129A66D7C00120F0F /* ItemTableViewCell.swift in Sources */,

@@ -11,6 +11,8 @@ import RealmSwift
 class TodoItem: Object{
     @Persisted var title: String = ""
     @Persisted var content: String = ""
-    @Persisted var deadline: String!
+    @Persisted var deadline: Date = Date()
+    
+    
     
 }
